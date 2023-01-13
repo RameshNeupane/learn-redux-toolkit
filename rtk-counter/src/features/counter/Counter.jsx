@@ -16,20 +16,24 @@ const Counter = () => {
 
   return (
     <section>
-      <h1>{count}</h1>
-      <button onClick={() => dispatch(increment())}>+</button>
-      <button onClick={() => dispatch(decrement())}>-</button>
+      <h1 className="count">{count}</h1>
+      <div>
+        <button onClick={() => dispatch(increment())}>+</button>
+        <button onClick={() => dispatch(decrement())}>-</button>
+      </div>
 
-      <input
-        type="number"
-        name="number"
-        id="number"
-        value={incrementAmount}
-        onChange={(event) => setIncrementAmount(event.target.value)}
-      />
-      <button onClick={() => dispatch(incrementByAmount(addValue))}>
-        Add amount
-      </button>
+      <div>
+        <input
+          type="number"
+          name="number"
+          id="number"
+          value={incrementAmount}
+          onChange={(event) => setIncrementAmount(event.target.value)}
+        />
+        <button onClick={() => dispatch(incrementByAmount(addValue))}>
+          Add amount
+        </button>
+      </div>
       <button onClick={resetAll}>Reset</button>
     </section>
   );

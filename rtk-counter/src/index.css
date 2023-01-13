@@ -6,7 +6,6 @@
 
 body {
   min-height: 100vh;
-  font-size: 5rem;
   display: grid;
   place-content: center;
 }
@@ -14,7 +13,12 @@ body {
 input,
 button {
   font: inherit;
-  padding: 0.5rem;
+  padding: 0 1rem;
+  height: 50px;
+  background-color: white;
+  outline: none;
+  border: 2px solid #abcdef;
+  border-radius: 5px;
 }
 
 section {
@@ -24,9 +28,14 @@ section {
   align-items: center;
 }
 
+.count {
+  font-size: 5rem;
+}
+
 input {
   text-align: center;
-  max-width: 2.5em;
+  max-width: 100px;
+  font-size: 2rem;
 }
 
 button {
@@ -37,4 +46,11 @@ button {
 
 button:first-child {
   margin-left: 0;
-} 
+}
+
+button:hover,
+input:focus,
+input:hover {
+  cursor: pointer;
+  border-color: #208cf8;
+}
